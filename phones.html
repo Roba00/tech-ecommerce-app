@@ -42,7 +42,12 @@
         </div>
     </nav>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <button onclick="getMethod()">Show All Offers</button>
+    <h1>Phones:</h1>
+    <pre id="showData"></pre>
+    <div id="showPhones"> </div>
+
+    <!-- <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
           <div class="my-3 py-3">
             <h2 id="iphone11" class="display-5">iPhone 11</h2>
@@ -102,7 +107,7 @@
           </div>
           <div id="phoneImg4"></div>
         </div>
-      </div>
+      </div> -->
 
     <!-- Footer -->
     <div class="container">
@@ -122,10 +127,72 @@
         </footer>
     </div>
 
+    <script>
+          function getMethod() {
+      fetch('http://localhost:8081/listPhones')
+      .then(response => response.json())
+      .then(data => {
+          console.log(data);
+          var container = document.getElementById("showData");
+          // container.innerHTML = JSON.stringify(data,undefined,2);
+          loadRobots(data);
+      })
+    };
+    function loadRobots(myPhones) {
+        var mainContainer = document.getElementById("showPhones");
+        for (var i = 0; i < myPhones.length; i++) {
+            let productId = myPhones[i].productId;
+            let brand = myPhones[i].brand;
+            let price = myPhones[i].price;
+            let text = myPhones[i].text;
+            let image = myPhones[i].image;
+            let div = document.createElement("div");
+            if (i%2 == 0) {
+              div.innerHTML = `
+              <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                <h2 id="iphone11" class="display-5">${brand} iPhone 11</h2>
+                <p id="phoneDesc1">${text}</p>
+                <h3 id="phonePrice1">${price}</h3>
+                <img src=${image} width="200"> <br> <br>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
+                    </div>
+                </div>
+                </div>
+              `;
+            }
+            else {
+              div.innerHTML = `
+              <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                <h2 id="iphone11" class="display-5">${brand} iPhone 11</h2>
+                <p id="phoneDesc1">${text}</p>
+                <h3 id="phonePrice1">${price}</h3>
+                <img src=${image} width="200"> <br> <br>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
+                    </div>
+                </div>
+                </div>
+              `;
+            }
+            
+            mainContainer.appendChild(div);
+            console.log(div);
+        }
+    }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
-    ></script>
+    >
+    </script>
+
 </body>
 </html>
