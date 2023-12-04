@@ -18,7 +18,21 @@ const db = client.db(dbName);
 app.get("/listPhones", async (req, res) => {
     await client.connect();
     console.log("Node connected successfully to GET MongoDB");
-    const query = {};
+    const query = {productType: "Phone"};
+    const results = await db
+    .collection("products")
+    .find(query)
+    .limit(100)
+    .toArray();
+    console.log(results);
+    res.status(200);
+    res.send(results);
+});
+
+app.get("/listWatches", async (req, res) => {
+    await client.connect();
+    console.log("Node connected successfully to GET MongoDB");
+    const query = {productType: "Watch"};
     const results = await db
     .collection("products")
     .find(query)
