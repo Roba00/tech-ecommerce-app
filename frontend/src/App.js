@@ -3,13 +3,16 @@ import HomePage from './components/HomePage/HomePage';
 import PhoneCatalogPage from './components/PhoneCatalogPage/PhoneCatalogPage';
 import WatchCatalogPage from './components/WatchCatalogPage/WatchCatalogPage';
 import AboutPage from './components/AboutPage/AboutPage';
+import LogInPage from './components/LogInPage/LogInPage';
+import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 
 function App() {
     const View = {
         home: "home-view",
         phone: "phone-view",
         watch: "watch-view",
-        about: "about-view"
+        about: "about-view",
+        login: "login-view"
     };
     const [view, setView] = useState(View.home);
 
@@ -32,7 +35,7 @@ function App() {
                             <li className="nav-item"><a className="nav-link" onClick={() => setView(View.about)}>ABOUT US</a></li>
                         </ul>
                         <ul className="collapse navbar-collapse justify-content-end list-unstyled" style={{ margin: 0 }}>
-                            <li className="ms-3"><a className="text-body-secondary" href="#"><img src="./images/icons/person.svg" width="30" height="30" alt="Person Icon" /></a></li>
+                            <li className="ms-3"><a className="text-body-secondary" href="#"><img src="./images/icons/person.svg" width="30" height="30" alt="Person Icon" onClick={() => setView(View.login)} /></a></li>
                             <li className="ms-3"><a className="text-body-secondary" href="#"><img src="./images/icons/bag.svg" width="25" height="25" alt="Bag Icon" /></a></li>
                         </ul>
                     </div>
@@ -46,6 +49,8 @@ function App() {
             {view === View.watch && <WatchCatalogPage />}
 
             {view === View.about && <AboutPage />}
+
+            {view === View.login && <><LogInPage /><hr/><CreateAccountPage /></>}
 
             {/* Footer */}
             <div className="container">

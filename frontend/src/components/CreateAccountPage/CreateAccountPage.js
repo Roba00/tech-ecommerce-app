@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
-const LogInPage = () => {
+const CreateAccountPage = () => {
   const [validated, setValidated] = useState(false);
 
   this.state = {
     username: '',
-    password: ''
+    password: '',
+    confirmPassword: ''
   }
 
   const handleSubmit = (event) => {
@@ -22,9 +23,8 @@ const LogInPage = () => {
     setValidated(true);
   };
 
-  return (
-    <div id="login-view">
-      <h1 style={{ margin: "10px 0px 15px 0px", textAlign: "center" }}>Login</h1>
+  return (<div id="create-account-view">
+      <h1 style={{ margin: "10px 0px 15px 0px", textAlign: "center" }}>Create Account</h1>
       <Container fluid="md">
         <Form validated={validated} onSubmit={handleSubmit}>
           <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
@@ -44,14 +44,24 @@ const LogInPage = () => {
               <Form.Control minLength='8' maxLength='32' type="password" placeholder="Password" required/>
             </Col>
           </Form.Group>
+
+          <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
+            <Form.Label column sm="2">
+              Confirm Password
+            </Form.Label>
+            <Col sm="10">
+              <Form.Control minLength='8' maxLength='32' type="password" placeholder="Password" required/>
+            </Col>
+          </Form.Group>
+
           <Button type="submit">Login</Button>
         </Form>
       </Container>
     </div>);
 };
 
-LogInPage.propTypes = {};
+CreateAccountPage.propTypes = {};
 
-LogInPage.defaultProps = {};
+CreateAccountPage.defaultProps = {};
 
-export default LogInPage;
+export default CreateAccountPage;
