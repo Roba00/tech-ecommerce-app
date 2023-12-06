@@ -13,8 +13,8 @@ const WatchCatalogPage = () => {
     fetch('http://localhost:8081/listWatches')
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        setWatches("Fetched watch catalog:", data);
+        console.log("Fetched watch catalog:", data);
+        setWatches(data);
       });
   }
 
