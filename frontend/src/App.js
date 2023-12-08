@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HomePage from './components/HomePage/HomePage';
 import PhoneCatalogPage from './components/PhoneCatalogPage/PhoneCatalogPage';
 import WatchCatalogPage from './components/WatchCatalogPage/WatchCatalogPage';
 import AboutPage from './components/AboutPage/AboutPage';
 import LogInPage from './components/LogInPage/LogInPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
+
+const isLoggedIn = () => {
+    return !sessionStorage.getItem("token")
+};
 
 function App() {
     const View = {
@@ -42,13 +46,13 @@ function App() {
                 </div>
             </nav>
 
-            {view === View.home && <HomePage />}
+            {view === View.home && (isLoggedIn() ? <HomePage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
 
-            {view === View.phone && <PhoneCatalogPage />}
+            {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
 
-            {view === View.watch && <WatchCatalogPage />}
+            {view === View.watch && (isLoggedIn() ? <WatchCatalogPage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
 
-            {view === View.about && <AboutPage />}
+            {view === View.about && (isLoggedIn() ? <AboutPage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
 
             {view === View.login && <><LogInPage /><hr/><CreateAccountPage /></>}
 

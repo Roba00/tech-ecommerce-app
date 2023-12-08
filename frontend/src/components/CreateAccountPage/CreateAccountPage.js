@@ -7,8 +7,8 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 const CreateAccountPage = () => {
   const [validated, setValidated] = useState(false);
 
-  this.state = {
-    username: '',
+  let state = {
+    email: '',
     password: '',
     confirmPassword: ''
   }
@@ -54,7 +54,7 @@ const CreateAccountPage = () => {
             </Col>
           </Form.Group>
 
-          <Button type="submit">Login</Button>
+          <Button type="submit">Create Account</Button>
         </Form>
       </Container>
     </div>);

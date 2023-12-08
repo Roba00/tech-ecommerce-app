@@ -4,22 +4,37 @@ import PropTypes from 'prop-types';
 
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
+const LOGIN_QUERY = "http://localhost:8081/login";
+
+const sendLoginRequest = async (userCredentials) => {
+  return await fetch(LOGIN_QUERY, {
+    headers: {'Content-Type': 'application/json'},
+    method: 'POST',
+    body: JSON.stringify(userCredentials)
+  });
+};
+
 const LogInPage = () => {
   const [validated, setValidated] = useState(false);
-
-  this.state = {
-    username: '',
+  const [userCredentials, setUserCredentials] = useState({
+    email: '',
     password: ''
-  }
+  });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-
-    setValidated(true);
+    const response = await sendLoginRequest(userCredentials);
+    console.log(response);
+    console.log(response.body);
+    const token = "test";
+    if (token !== "" && token !== null) {
+      setValidated(true);
+      sessionStorage.setItem("token", token)
+    }
   };
 
   return (
@@ -32,7 +47,8 @@ const LogInPage = () => {
               Email
             </Form.Label>
             <Col sm="10">
-              <Form.Control type="email" placeholder="Email: email@example.com" required/>
+              <Form.Control type="email" placeholder="Email: email@example.com" required
+              onChange={e => setUserCredentials({email: e.target.value, password: userCredentials.password})}/>
             </Col>
           </Form.Group>
 
@@ -41,7 +57,8 @@ const LogInPage = () => {
               Password
             </Form.Label>
             <Col sm="10">
-              <Form.Control minLength='8' maxLength='32' type="password" placeholder="Password" required/>
+              <Form.Control minLength='8' maxLength='32' type="password" placeholder="Password" required
+              onChange={e => setUserCredentials({email: userCredentials.email, password: e.target.value})}/>
             </Col>
           </Form.Group>
           <Button type="submit">Login</Button>
