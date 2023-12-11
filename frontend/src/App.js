@@ -5,9 +5,16 @@ import WatchCatalogPage from './components/WatchCatalogPage/WatchCatalogPage';
 import AboutPage from './components/AboutPage/AboutPage';
 import LogInPage from './components/LogInPage/LogInPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
+import UserPage from './components/UserPage/UserPage';
 
 const isLoggedIn = () => {
-    return !sessionStorage.getItem("token")
+    console.log("Has token:", !(sessionStorage.getItem("token") == null || sessionStorage.getItem("token") == ""));
+    return !(sessionStorage.getItem("token") == null || sessionStorage.getItem("token") == "");
+};
+
+const getToken = () => {
+    console.log(sessionStorage.getItem("token"));
+    return sessionStorage.getItem("token");
 };
 
 function App() {
@@ -46,15 +53,15 @@ function App() {
                 </div>
             </nav>
 
-            {view === View.home && (isLoggedIn() ? <HomePage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
+            {view === View.home && (isLoggedIn() ? <HomePage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
+            {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.watch && (isLoggedIn() ? <WatchCatalogPage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
+            {view === View.watch && (isLoggedIn() ? <WatchCatalogPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.about && (isLoggedIn() ? <AboutPage /> : <><LogInPage /><hr/><CreateAccountPage /></>)}
+            {view === View.about && (isLoggedIn() ? <AboutPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.login && <><LogInPage /><hr/><CreateAccountPage /></>}
+            {view === View.login && (isLoggedIn() ? <UserPage userToken={getToken()}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {/* Footer */}
             <div className="container">

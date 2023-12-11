@@ -7,11 +7,12 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 const LOGIN_QUERY = "http://localhost:8081/login";
 
 const sendLoginRequest = async (userCredentials) => {
-  return await fetch(LOGIN_QUERY, {
-    headers: {'Content-Type': 'application/json'},
+  const response = await fetch(LOGIN_QUERY, {
+    headers: { 'Content-Type': 'application/json' },
     method: 'POST',
     body: JSON.stringify(userCredentials)
   });
+  return await response.json();
 };
 
 const LogInPage = () => {
@@ -23,17 +24,20 @@ const LogInPage = () => {
 
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
+    //if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-    }
+    //}
     const response = await sendLoginRequest(userCredentials);
     console.log(response);
-    console.log(response.body);
-    const token = "test";
+    const token = response.token;
     if (token !== "" && token !== null) {
       setValidated(true);
       sessionStorage.setItem("token", token)
+      window.location.reload();
+    }
+    else {
+      alert("Incorrect login! Try again.");
     }
   };
 
@@ -48,7 +52,7 @@ const LogInPage = () => {
             </Form.Label>
             <Col sm="10">
               <Form.Control type="email" placeholder="Email: email@example.com" required
-              onChange={e => setUserCredentials({email: e.target.value, password: userCredentials.password})}/>
+                onChange={e => setUserCredentials({ email: e.target.value, password: userCredentials.password })} />
             </Col>
           </Form.Group>
 
@@ -58,7 +62,7 @@ const LogInPage = () => {
             </Form.Label>
             <Col sm="10">
               <Form.Control minLength='8' maxLength='32' type="password" placeholder="Password" required
-              onChange={e => setUserCredentials({email: userCredentials.email, password: e.target.value})}/>
+                onChange={e => setUserCredentials({ email: userCredentials.email, password: e.target.value })} />
             </Col>
           </Form.Group>
           <Button type="submit">Login</Button>
