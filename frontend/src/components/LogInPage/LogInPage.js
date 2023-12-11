@@ -24,10 +24,9 @@ const LogInPage = () => {
 
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
-    //if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    //}
+    event.preventDefault();
+    event.stopPropagation();
+
     const response = await sendLoginRequest(userCredentials);
     console.log(response);
     const token = response.token;

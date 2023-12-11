@@ -23,31 +23,11 @@ const client = new MongoClient(url);
 const db = client.db(dbName);
 
 // Authentication
-// Credit: https://hackernoon.com/how-to-add-authentication-to-a-full-stack-mern-web-application
 const jwt = require("jsonwebtoken");
-const verifyToken = (req, res, next) => {
-    const token = String(req.headers.authorization)
-        .replace(/^bearer|^jwt/i, "")
-        .replace(/^\s+|\s+$/gi, "");
 
-    try {
-        if (!token) {
-            return res.status(403).json({
-                statusCode: 403,
-                msg: "A token is required for authentication",
-            });
-        }
-        /* Verifying the token. */
-        const decoded = jwt.verify(token, process.env.TOKEN_KEY);
-        req.userData = decoded;
-    } catch (err) {
-        return res.status(401).json({
-            statusCode: 401,
-            msg: "Invalid Token",
-        });
-    }
-    return next();
-};
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
 
 app.listen(PORT, () => {
     console.log("App listening at http://%s:%d", HOST, PORT);
@@ -112,7 +92,7 @@ app.post("/login", async (req, res) => {
 
 app.post("/createAccount", async (req, res) => {
     await client.connect();
-    console.log("Node connected successfully to Login MongoDB");
+    console.log("Node connected successfully to Create Account MongoDB");
     const query = { email: req.body.email };
     const results = await db
         .collection("users")
@@ -128,11 +108,16 @@ app.post("/createAccount", async (req, res) => {
                 password: req.body.password,
                 name: req.body.name,
                 location: req.body.location,
-                image: req.body.image
+                image: req.body.image,
+                title: req.body.title,
+                phone: req.body.phone,
+                wishlist: [`${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`],
+                cart: [`${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`],
+                recentlyPurchased: [`${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`]
             });
 
         /* Creating a token. */
-        const token = jwt.sign({ email: query.email }, TOKEN_KEY, {
+        const token = jwt.sign({ email: req.body.email }, TOKEN_KEY, {
             expiresIn: "2h",
         });
         console.log(token);
@@ -165,14 +150,14 @@ app.get("/getAccount", async (req, res) => {
         /* Verifying the token. */
         const decoded = jwt.verify(token, TOKEN_KEY);
         console.log(decoded);
-        req.userData = decoded;
+        req.decodedToken = decoded;
     } catch (err) {
         return res.status(401).json({
             statusCode: 401,
             msg: "Invalid Token",
         });
     }
-    const query = { email: req.userData.email };
+    const query = { email: req.decodedToken.email };
     const results = await db
         .collection("users")
         .find(query)
@@ -194,12 +179,10 @@ app.get("/getAccount", async (req, res) => {
     });
 });
 
-app.post("/updateAccount", async (req, res) => {
-    console.log(req, res);
+app.put("/updateAccount", async (req, res) => {
     await client.connect();
     console.log("Node connected successfully to Update Account MongoDB");
     const token = String(req.headers.authorization);
-    console.log(req.headers);
     console.log(token);
     try {
         if (!token) {
@@ -210,8 +193,8 @@ app.post("/updateAccount", async (req, res) => {
         }
         /* Verifying the token. */
         const decoded = jwt.verify(token, TOKEN_KEY);
-        console.log(decoded);
-        req.userData = decoded;
+        console.log("User JWT decoded:", decoded);
+        req.decodedToken = decoded;
     } catch (err) {
         return res.status(401).json({
             statusCode: 401,
@@ -219,9 +202,9 @@ app.post("/updateAccount", async (req, res) => {
         });
     }
 
-    const values = Object.values(req.body);
-
-    console.log(results);
+    console.log(req.body.email);
+    delete req.body._id;
+    /*console.log(values);
     const [id, name, password, location, image, wishlist, cart, recentlyPurchased, email, title, phone] = values;
     console.log("Product to update:", id);
     const replacement = {
@@ -236,17 +219,23 @@ app.post("/updateAccount", async (req, res) => {
         "email": email,
         "title": title,
         "phone": phone,
-    };
-
-    if (results.length !== 0 && email === req.userData.email) {
+    };*/
+    if (req.decodedToken.email === req.body.email) {
         /* Creating a results. */
-        const query = { "id": id };
-        const results = await db.collection("fakestore_catalog")
-            .replaceOne(query, replacement);
+        const query = { "email": req.decodedToken.email };
+        const results = await db.collection("users")
+            .replaceOne(query, req.body);
 
-        if (!results) res.send("Not Found").status(404);
-        res.status(200);
-        res.send(results);
+        if (!results) {
+            return res.status(404).json({
+            statusCode: 404,
+            msg: "Not found."
+        });
+        }
+        return res.status(200).json({
+            statusCode: 200,
+            msg: "Successfully updated user info!"
+        });
     }
     return res.status(401).json({
         statusCode: 401,

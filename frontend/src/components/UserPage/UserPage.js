@@ -50,8 +50,8 @@ const updateUserInformation = async (userToken, userInfo, updateInfoField, updat
 
   const results = await fetch(UPDATE_ACCOUNT_QUERY, {
     headers: { 'Content-Type': 'application/json', 'authorization': userToken },
-    method: 'POST',
-    body: userInfoCopy
+    method: 'PUT',
+    body: JSON.stringify(userInfoCopy)
   });
   const data = await results.json();
   if (data.statusCode != 200) {
@@ -59,7 +59,7 @@ const updateUserInformation = async (userToken, userInfo, updateInfoField, updat
     sessionStorage.removeItem("token");
     window.location.reload();
   }
-  alert("User inforamtion update successful.");
+  alert(`User information for ${updateInfoField} updated successfully.`);
   window.location.reload();
 }
 

@@ -53,7 +53,7 @@ function App() {
                 </div>
             </nav>
 
-            {view === View.home && (isLoggedIn() ? <HomePage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+            {view === View.home && <HomePage />}
 
             {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
