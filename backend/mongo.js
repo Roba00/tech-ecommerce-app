@@ -61,6 +61,48 @@ app.get("/listWatches", async (req, res) => {
     res.send(results);
 });
 
+app.get("/listLaptops", async (req, res) => {
+    await client.connect();
+    console.log("Node connected successfully to List Laptops MongoDB");
+    const query = { productType: "Laptop" };
+    const results = await db
+        .collection("products")
+        .find(query)
+        .limit(100)
+        .toArray();
+    console.log(results);
+    res.status(200);
+    res.send(results);
+});
+
+app.get("/listTablets", async (req, res) => {
+    await client.connect();
+    console.log("Node connected successfully to List Tablets MongoDB");
+    const query = { productType: "Tablet" };
+    const results = await db
+        .collection("products")
+        .find(query)
+        .limit(100)
+        .toArray();
+    console.log(results);
+    res.status(200);
+    res.send(results);
+});
+
+app.get("/listVrs", async (req, res) => {
+    await client.connect();
+    console.log("Node connected successfully to List Vrs MongoDB");
+    const query = { productType: "VR" };
+    const results = await db
+        .collection("products")
+        .find(query)
+        .limit(100)
+        .toArray();
+    console.log(results);
+    res.status(200);
+    res.send(results);
+});
+
 app.post("/login", async (req, res) => {
     await client.connect();
     console.log("Node connected successfully to Login MongoDB");

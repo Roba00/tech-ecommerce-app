@@ -3,6 +3,10 @@ import HomePage from './components/HomePage/HomePage';
 import PhoneCatalogPage from './components/PhoneCatalogPage/PhoneCatalogPage';
 import ProductPage from './components/ProductPage/ProductPage';
 import WatchCatalogPage from './components/WatchCatalogPage/WatchCatalogPage';
+import LaptopCatalogPage from './components/LaptopCatalogPage/LaptopCatalogPage';
+import TabletCatalogPage from './components/TabletCatalogPage/TabletCatalogPage';
+import VrCatalogPage from './components/VrCatalogPage/VrCatalogPage';
+
 import AboutPage from './components/AboutPage/AboutPage';
 import LogInPage from './components/LogInPage/LogInPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
@@ -26,6 +30,9 @@ function App() {
         review: "review-view",
         watch: "watch-view",
         about: "about-view",
+        laptop: "laptop-view",
+        tablet: "tablet-view",
+        vr: "vr-view",
         login: "login-view",
         cart: "cart-view"
     };
@@ -66,6 +73,12 @@ function App() {
             {view === View.review && (isLoggedIn() ? <ProductPage product={product_sent} userToken={getToken()}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.watch && (isLoggedIn() ? <WatchCatalogPage setView={setView} setProduct={setProduct} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+
+            {view === View.laptop && (isLoggedIn() ? <LaptopCatalogPage setView={setView} setProduct={setProduct} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+
+            {view === View.tablet && (isLoggedIn() ? <TabletCatalogPage setView={setView} setProduct={setProduct} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+
+            {view === View.vr && (isLoggedIn() ? <VrCatalogPage setView={setView} setProduct={setProduct} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.about && (isLoggedIn() ? <AboutPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
