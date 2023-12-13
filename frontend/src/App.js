@@ -7,6 +7,7 @@ import AboutPage from './components/AboutPage/AboutPage';
 import LogInPage from './components/LogInPage/LogInPage';
 import CreateAccountPage from './components/CreateAccountPage/CreateAccountPage';
 import UserPage from './components/UserPage/UserPage';
+import CartPage from './components/CartPage/CartPage';
 
 const isLoggedIn = () => {
     console.log("Has token:", !(sessionStorage.getItem("token") == null || sessionStorage.getItem("token") == ""));
@@ -25,10 +26,12 @@ function App() {
         review: "review-view",
         watch: "watch-view",
         about: "about-view",
-        login: "login-view"
+        login: "login-view",
+        cart: "cart-view"
     };
     const [view, setView] = useState(View.home);
     const [product_sent, setProduct] = useState({});
+    const [cart, setCart] = useState([]);
 
     return (
         <div className='App'>
@@ -50,7 +53,7 @@ function App() {
                         </ul>
                         <ul className="collapse navbar-collapse justify-content-end list-unstyled" style={{ margin: 0 }}>
                             <li className="ms-3"><a className="text-body-secondary" href="#"><img src="./images/icons/person.svg" width="30" height="30" alt="Person Icon" onClick={() => setView(View.login)} /></a></li>
-                            <li className="ms-3"><a className="text-body-secondary" href="#"><img src="./images/icons/bag.svg" width="25" height="25" alt="Bag Icon" /></a></li>
+                            <li className="ms-3"><a className="text-body-secondary" href="#"><img src="./images/icons/bag.svg" width="25" height="25" alt="Bag Icon" onClick={() => setView(View.cart)} /></a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,15 +61,17 @@ function App() {
 
             {view === View.home && <HomePage />}
 
-            {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage setView={setView} setProduct={setProduct}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+            {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage setView={setView} setProduct={setProduct} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.review && (isLoggedIn() ? <ProductPage product={product_sent} userToken={getToken()}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.watch && (isLoggedIn() ? <WatchCatalogPage setView={setView} setProduct={setProduct}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+            {view === View.watch && (isLoggedIn() ? <WatchCatalogPage setView={setView} setProduct={setProduct} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.about && (isLoggedIn() ? <AboutPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.login && (isLoggedIn() ? <UserPage userToken={getToken()}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+
+            {view === View.cart && (isLoggedIn() ? <CartPage userToken={getToken()} cart={cart} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {/* Footer */}
             <div className="container">

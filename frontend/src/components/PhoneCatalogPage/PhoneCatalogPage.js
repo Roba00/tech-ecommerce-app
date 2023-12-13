@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
-const PhoneCatalogPage = ({setView, setProduct}) => {
+const PhoneCatalogPage = ({setView, setProduct, setCart}) => {
   const [phones, setPhones] = useState([]);
 
   useEffect(() => {
@@ -17,6 +17,20 @@ const PhoneCatalogPage = ({setView, setProduct}) => {
         console.log("Fetched phone catalog:", data);
         setPhones(data);
       });
+  }
+
+  function addToCart(product) {
+    product.quantity = 1;
+    setCart(existingProducts => {
+      if (existingProducts.find(p => p.productId == product.productId)) {
+        existingProducts.find(p => p.productId == product.productId).quantity += 1;
+        return [...existingProducts];
+      }
+      else {
+        return [...existingProducts, product];
+      }
+    });
+    alert("Added product to cart!");
   }
 
   function returners(product) {
@@ -35,7 +49,7 @@ const PhoneCatalogPage = ({setView, setProduct}) => {
               <p className="card-text"><small className="text-muted">Price: {price}</small></p>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
-                  <button type="button" className="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                  <button type="button" className="btn btn-sm btn-outline-secondary" onClick={() => addToCart(product_sent)}>Add to Cart</button>
                   <button type="button" className="btn btn-sm btn-outline-secondary" onClick={() => returners(product_sent)}>Reviews</button>
                 </div>
               </div>
