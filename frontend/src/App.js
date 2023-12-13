@@ -60,7 +60,7 @@ function App() {
 
             {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage setView={setView} setProduct={setProduct}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.review && (isLoggedIn() ? <ProductPage product={product_sent}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+            {view === View.review && (isLoggedIn() ? <ProductPage product={product_sent} userToken={getToken()}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.watch && (isLoggedIn() ? <WatchCatalogPage setView={setView} setProduct={setProduct}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 

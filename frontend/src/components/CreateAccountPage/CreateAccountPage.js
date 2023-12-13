@@ -32,7 +32,11 @@ const CreateAccountPage = () => {
     const form = event.currentTarget;
     event.preventDefault();
     event.stopPropagation();
-
+    if (userCredentials.password !== userCredentials.confirmPassword) {
+      alert("Confirm password does not match! Try again.");
+      return;
+    }
+    
     const response = await createAccountRequest(userCredentials);
     console.log(response);
     const token = response.token;

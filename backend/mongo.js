@@ -101,9 +101,19 @@ app.post("/createAccount", async (req, res) => {
         .toArray();
     console.log(results);
     if (results.length === 0) {
+        const newIdObject = await db
+            .collection("users")
+            .find()
+            .sort({id:-1})
+            .limit(1)
+            .toArray();
+        console.log(newIdObject);
+        const newId = `${parseInt(newIdObject[0].id) + 1}`;
+
         const createAccountResults = await db
             .collection("users")
             .insertOne({
+                id: newId,
                 email: req.body.email,
                 password: req.body.password,
                 name: req.body.name,
@@ -288,3 +298,56 @@ app.get("/getUserById/:id", async (req, res) => {
     res.status(200);
     res.send(results[0]);
 });
+
+app.put("/addReview/:productId/:userId/", async (req, res) => {
+    const productId = Number(req.params.productId);
+    const userId = Number(req.params.userId);
+
+    await client.connect();
+    console.log("Node connected successfully to Add Review By User ID MongoDB");
+    console.log(`Adding review for product ${productId} for user ${userId} with body:`, req.body);
+
+    const oldQuery =  {$and: [{productId: `${productId}`}, {reviews: {$elemMatch: {userId: userId}}}]};
+    const deleteQuery = { $pull: { "reviews": { userId : userId } }};
+    const oldResults = await db
+        .collection("products")
+        .updateMany(
+            oldQuery,
+            deleteQuery
+        );
+        
+    const query =  {productId: `${productId}`};
+    const insert = { $push: { "reviews": { userId : userId, title: req.body.title, text: req.body.text, "rating": req.body.rating } } };
+    const results = await db
+        .collection("products")
+        .updateOne(
+            query,
+            insert
+        );
+    console.log(results);
+    res.status(200);
+    res.send(results);
+});
+
+app.delete("/deleteReview/:productId/:userId/", async (req, res) => {
+    const productId = Number(req.params.productId);
+    const userId = Number(req.params.userId);
+
+    await client.connect();
+    console.log("Node connected successfully to Delete Review By User ID MongoDB");
+    console.log(`Adding review for product ${productId} for user ${userId}`);
+    const query =  {$and: [{productId: `${productId}`}, {reviews: {$elemMatch: {userId: userId}}}]};
+    const deleteQuery = { $pull: { "reviews": { userId : userId } }};
+    const results = await db
+        .collection("products")
+        .updateMany(
+            query,
+            deleteQuery
+        );
+    console.log(results);
+    res.status(200);
+    res.send(results);
+});
+// db.products.update({$and: [{productId: "1"}, {reviews: {$elemMatch: {userId: 1}}}]}, { $push: { "reviews": { userId : 4, title: "Title", text:  "Text", "rating": 4 } } });
+// db.products.update({$and: [{productId: "1"}, {reviews: {$elemMatch: {userId: 1}}}]}, { $pull: { "reviews": { userId : 1 } } });
+// db.products.find({productId: "1"}, {reviews: {$elemMatch: {userId: 1}}})
