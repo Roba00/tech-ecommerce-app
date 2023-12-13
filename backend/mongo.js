@@ -265,3 +265,26 @@ app.get("/getProductById/:id", async (req, res) => {
     res.status(200);
     res.send(results[0]);
 });
+
+app.get("/getUserById/:id", async (req, res) => {
+    const id = Number(req.params.id);
+    console.log("User to find:", id);
+
+    await client.connect();
+    console.log("Node connected successfully to Get User By ID MongoDB");
+    const query = { id: `${id}` };
+    const results = await db
+        .collection("users")
+        .find(query)
+        .limit(1)
+        .toArray();
+    console.log(results);
+    if (!results || results.length === 0) {
+        return res.status(404).json({
+            statusCode: 404,
+            msg: `Could not find user with id ${id}!`
+        });
+    }
+    res.status(200);
+    res.send(results[0]);
+});

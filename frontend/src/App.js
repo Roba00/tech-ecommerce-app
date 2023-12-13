@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import HomePage from './components/HomePage/HomePage';
 import PhoneCatalogPage from './components/PhoneCatalogPage/PhoneCatalogPage';
+import ProductPage from './components/ProductPage/ProductPage';
 import WatchCatalogPage from './components/WatchCatalogPage/WatchCatalogPage';
 import AboutPage from './components/AboutPage/AboutPage';
 import LogInPage from './components/LogInPage/LogInPage';
@@ -21,11 +22,13 @@ function App() {
     const View = {
         home: "home-view",
         phone: "phone-view",
+        review: "review-view",
         watch: "watch-view",
         about: "about-view",
         login: "login-view"
     };
     const [view, setView] = useState(View.home);
+    const [product_sent, setProduct] = useState({});
 
     return (
         <div className='App'>
@@ -55,9 +58,11 @@ function App() {
 
             {view === View.home && <HomePage />}
 
-            {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+            {view === View.phone && (isLoggedIn() ? <PhoneCatalogPage setView={setView} setProduct={setProduct}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.watch && (isLoggedIn() ? <WatchCatalogPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+            {view === View.review && (isLoggedIn() ? <ProductPage product={product_sent}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+
+            {view === View.watch && (isLoggedIn() ? <WatchCatalogPage setView={setView} setProduct={setProduct}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.about && (isLoggedIn() ? <AboutPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
