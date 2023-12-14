@@ -163,9 +163,9 @@ app.post("/createAccount", async (req, res) => {
                 image: req.body.image,
                 title: req.body.title,
                 phone: req.body.phone,
-                wishlist: [`${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`],
-                cart: [`${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`],
-                recentlyPurchased: [`${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`, `${getRandomInt(8)+1}`]
+                wishlist: [`${getRandomInt(20)+1}`, `${getRandomInt(20)+1}`, `${getRandomInt(20)+1}`],
+                cart: [`${getRandomInt(20)+1}`, `${getRandomInt(20)+1}`, `${getRandomInt(20)+1}`],
+                recentlyPurchased: [`${getRandomInt(20)+1}`, `${getRandomInt(20)+1}`, `${getRandomInt(20)+1}`]
             });
 
         /* Creating a token. */

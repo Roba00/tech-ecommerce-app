@@ -19,7 +19,7 @@ const CartPage = ({ userToken, cart, setCart }) => {
 
   function getTotalPrice() {
     let totalPrice = 0;
-    cart.forEach(cartItem => { totalPrice += cartItem.price });
+    cart.forEach(cartItem => { totalPrice += (cartItem.price * (cartItem.quantity)) });
     return totalPrice;
   }
 

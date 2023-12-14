@@ -82,7 +82,7 @@ function App() {
 
             {view === View.about && (isLoggedIn() ? <AboutPage /> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
-            {view === View.login && (isLoggedIn() ? <UserPage userToken={getToken()}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
+            {view === View.login && (isLoggedIn() ? <UserPage userToken={getToken()} setView={setView}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 
             {view === View.cart && (isLoggedIn() ? <CartPage userToken={getToken()} cart={cart} setCart={setCart}/> : <><LogInPage /><hr /><CreateAccountPage /></>)}
 

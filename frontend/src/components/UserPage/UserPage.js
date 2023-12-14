@@ -76,7 +76,7 @@ const ProductItem = ({ brand, name, price, image }) => {
   )
 };
 
-const UserPage = ({ userToken }) => {
+const UserPage = ({ userToken, setView }) => {
   const [accountInfo, setAccountInfo] = useState({
     id: 0,
     name: "Loading name...",
@@ -120,7 +120,7 @@ const UserPage = ({ userToken }) => {
               <p className="text-muted mb-1">{accountInfo.title}</p>
               <p className="text-muted mb-4">{accountInfo.location}</p>
               <div class="d-flex justify-content-center mb-2">
-                <button type="button" class="btn btn-outline-primary ms-1">View Cart</button>
+                <button type="button" class="btn btn-outline-primary ms-1" onClick={() => setView("cart-view")}>View Cart</button>
                 <button type="button" class="btn btn-primary" onClick={() => logout()}>Log Out</button>
               </div>
             </div>
