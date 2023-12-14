@@ -1,0 +1,224 @@
+[{
+  "_id": {
+    "$oid": "6564c4c6b514639a32d624d2"
+  },
+  "id": "3",
+  "name": "Michael B Jordan",
+  "password": "password",
+  "location": "Jupiter, Florida",
+  "image": "http://127.0.0.1:8081/images/users/Michael-B-Jordan.jpg",
+  "wishlist": [
+    "3",
+    "7",
+    "1"
+  ],
+  "cart": [
+    "1",
+    "2",
+    "4"
+  ],
+  "recentlyPurchased": [
+    "4",
+    "5",
+    "2"
+  ],
+  "email": "coolhaircut@gmail.com",
+  "title": "Basketball Player?",
+  "phone": "(947) 234-8236"
+},
+{
+  "_id": {
+    "$oid": "6564c4c6b514639a32d624d1"
+  },
+  "id": "2",
+  "name": "Marcus Brownlee",
+  "password": "password2",
+  "location": "Kearny, New Jersy",
+  "image": "http://127.0.0.1:8081/images/users/maques-brownlee.jpg",
+  "wishlist": [
+    "2",
+    "7",
+    "3"
+  ],
+  "cart": [
+    "3",
+    "2",
+    "4"
+  ],
+  "recentlyPurchased": [
+    "5",
+    "4",
+    "6"
+  ],
+  "email": "techdude@gmail.com",
+  "title": "Youtuber",
+  "phone": "(356) 123-9327"
+},
+{
+  "_id": {
+    "$oid": "6564c4c6b514639a32d624d0"
+  },
+  "id": "1",
+  "name": "The Rock",
+  "password": "password",
+  "location": "Beverly Parks, Los Angeles",
+  "image": "http://127.0.0.1:8081/images/users/Dwayne-Johnson.jpg",
+  "wishlist": [
+    "1",
+    "4",
+    "3"
+  ],
+  "cart": [
+    "3",
+    "2",
+    "1"
+  ],
+  "recentlyPurchased": [
+    "4",
+    "1",
+    "3"
+  ],
+  "email": "rockingit@gmail.com",
+  "title": "Xtreme Personal Trainer",
+  "phone": "(213) 321-2174"
+},
+{
+  "_id": {
+    "$oid": "6577516f61a58ec6ca5a4945"
+  },
+  "id": "4",
+  "email": "robaa@iastate.edu",
+  "password": "password",
+  "name": "Roba Abbajabal",
+  "location": "Ames, Iowa",
+  "image": "https://a.pinatafarm.com/396x396/c2489b235d/thinking-black-guy.jpg",
+  "title": "Software Developer",
+  "phone": "(123) 456-7890",
+  "wishlist": [
+    "4",
+    "3",
+    "6"
+  ],
+  "cart": [
+    "5",
+    "5",
+    "5"
+  ],
+  "recentlyPurchased": [
+    "2",
+    "4",
+    "8"
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a020812f91d04f95d1cac"
+  },
+  "id": "5",
+  "email": "something@gmail.com",
+  "password": "password",
+  "name": "Name",
+  "location": "City, State, Country",
+  "image": "https://st3.depositphotos.com/17828278/33150/v/450/depositphotos_331503262-stock-illustration-no-image-vector-symbol-missing.jpg",
+  "title": "Job Title",
+  "phone": "(123) 456 7890",
+  "wishlist": [
+    "7",
+    "8",
+    "1"
+  ],
+  "cart": [
+    "3",
+    "1",
+    "6"
+  ],
+  "recentlyPurchased": [
+    "8",
+    "1",
+    "5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a028a12f91d04f95d1cad"
+  },
+  "id": "6",
+  "email": "test@gmail.com",
+  "password": "testing1",
+  "name": "Test2",
+  "location": "Test2",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png",
+  "title": "Test2",
+  "phone": "Phone",
+  "wishlist": [
+    "7",
+    "3",
+    "1"
+  ],
+  "cart": [
+    "8",
+    "7",
+    "7"
+  ],
+  "recentlyPurchased": [
+    "7",
+    "5",
+    "3"
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a02ece27452a512cc58bf"
+  },
+  "id": "7",
+  "email": "Test3@gmail.com",
+  "password": "password",
+  "name": "Test3",
+  "location": "Test3",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png",
+  "title": "Test3",
+  "phone": "Test3",
+  "wishlist": [
+    "4",
+    "7",
+    "6"
+  ],
+  "cart": [
+    "5",
+    "5",
+    "8"
+  ],
+  "recentlyPurchased": [
+    "6",
+    "2",
+    "3"
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a45e0ba33fa35c6d73f64"
+  },
+  "id": "8",
+  "email": "coshea@iastate.edu",
+  "password": "superpassword",
+  "name": "Conor",
+  "location": "Ames",
+  "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+  "title": "Epic",
+  "phone": "2",
+  "wishlist": [
+    "10",
+    "13",
+    "7"
+  ],
+  "cart": [
+    "13",
+    "2",
+    "13"
+  ],
+  "recentlyPurchased": [
+    "10",
+    "4",
+    "2"
+  ]
+}]

@@ -1,0 +1,652 @@
+[{
+  "_id": {
+    "$oid": "6564c458b514639a32d624ca"
+  },
+  "productId": "1",
+  "productType": "Phone",
+  "brand": "Apple",
+  "title": "iPhone 11",
+  "price": 249.99,
+  "text": "The iPhone 11 is a smartphone designed, developed, and marketed by Apple Inc. It is the thirteenth generation of iPhone, succeeding the iPhone XR, and was unveiled on September 10, 2019, alongside the higher-end iPhone 11 Pro.",
+  "image": "http://127.0.0.1:8081/images/phoneimages/iphone11.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "A technological masterpiece",
+      "text": "The iPhone 11 is a technological marvel! Its exceptional camera captures stunning photos, and the A13 Bionic chip ensures seamless performance. The battery life is impressive, easily lasting a day. The sleek design and vibrant display add to the overall appeal. A top-notch device delivering excellence in every aspect!",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Ok... I guess",
+      "text": "The iPhone 11 is decent but falls short in some areas. The camera, while good, lacks the finesse of higher-end models. Battery life is satisfactory, but not groundbreaking. The design is a bit dated, and the absence of some advanced features disappoints. It's a reliable phone, but not a game-changer.",
+      "rating": 3
+    },
+    {
+      "userId": 3,
+      "title": "Disappointed!",
+      "text": "The iPhone 11 disappoints on multiple fronts. The camera fails to impress, delivering subpar results compared to its price range. Battery life struggles with heavy use, and the design feels uninspired. Limited innovation and features make it feel outdated quickly. Considerable room for improvement leaves this model lagging behind competitors.",
+      "rating": 2
+    },
+    {
+      "userId": 4,
+      "title": "Title",
+      "text": "Text",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6564c458b514639a32d624cb"
+  },
+  "productId": "2",
+  "productType": "Phone",
+  "brand": "Apple",
+  "title": "iPhone 12 Mini",
+  "price": 299.99,
+  "text": "The iPhone 12 and iPhone 12 Mini (stylized and marketed as iPhone 12 mini) are smartphones designed, developed, and marketed by Apple Inc. They are the fourteenth-generation, affordable flagship iPhones, succeeding the iPhone 11.",
+  "image": "http://127.0.0.1:8081/images/phoneimages/iphone12.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Underwhelming Miniature Disaster",
+      "text": "The iPhone 12 Mini is a colossal disappointment. Its small size sacrifices functionality, with a battery that barely lasts a few hours. The camera, touted as a highlight, produces mediocre results. Frequent overheating issues make this phone a regrettable purchase. An expensive misstep by Apple.",
+      "rating": 1
+    },
+    {
+      "userId": 2,
+      "title": "Mighty Marvel in Miniature",
+      "text": "The iPhone 12 Mini is a triumph of compact brilliance. Its pocket-sized design doesn't compromise power—the A14 Bionic chip ensures swift performance. The camera captures stunning details, and 5G capability keeps me connected. A perfect blend of form and function, making it an extraordinary device in a small package.",
+      "rating": 5
+    },
+    {
+      "userId": 3,
+      "title": "Diminutive Disappointment",
+      "text": "The iPhone 12 Mini falls short of expectations. While its size is appealing, performance issues plague its capabilities. The battery life is abysmal, struggling to last through a day of regular use. The camera fails to impress, lacking the excellence associated with the iPhone brand. A regrettable purchase.",
+      "rating": 2
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6564c458b514639a32d624cc"
+  },
+  "productId": "3",
+  "productType": "Phone",
+  "brand": "Samsung",
+  "title": "Galaxy A54 5G",
+  "price": 449.99,
+  "text": "The Samsung Galaxy A54 5G is a mid-range Android-based smartphone developed and manufactured by Samsung Electronics as a part of its Galaxy A series.",
+  "image": "http://127.0.0.1:8081/images/phoneimages/samsunga54.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Middle-of-the-Road Marvel",
+      "text": "The Samsung Galaxy A54 5G offers a decent mid-range experience. Its 5G capability is a plus, and the camera system performs adequately. However, the plastic build feels less premium, and the display, while vibrant, could be sharper. A satisfactory device for the price but lacks the wow factor.",
+      "rating": 3
+    },
+    {
+      "userId": 2,
+      "title": "5G Fiasco",
+      "text": "The Samsung Galaxy A54 5G is a regrettable purchase. The promised 5G speed is inconsistent, often reverting to slower connections. The camera disappoints with lackluster image quality. The plastic build feels cheap, and the overall performance is sluggish. A frustrating and underwhelming experience—steer clear of this device.",
+      "rating": 1
+    },
+    {
+      "userId": 3,
+      "title": "Solid Mid-Range Performer",
+      "text": "The Samsung Galaxy A54 5G impresses with its balanced features. The 5G connectivity is reliable, and the camera system captures quality shots. The plastic build keeps it lightweight but sacrifices a premium feel. The display is vibrant, and the overall performance is commendable. A dependable mid-range choice with few compromises.",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6564c458b514639a32d624cd"
+  },
+  "productId": "4",
+  "productType": "Phone",
+  "brand": "Samsung",
+  "title": "Galaxy S21",
+  "price": 599.99,
+  "text": "The Samsung Galaxy S21 is a series of high end Android-based smartphones designed, developed, marketed, and manufactured by Samsung Electronics as part of its Galaxy S series. They collectively serve as the successor to the Samsung Galaxy S20 series.",
+  "image": "http://127.0.0.1:8081/images/phoneimages/samsungs21.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Mixed Bag Marvel",
+      "text": "The Samsung Galaxy S21 offers a blend of highs and lows. The camera excels with versatile features, but battery life is inconsistent. The sleek design and vibrant display impress, yet the plastic back feels less premium. A capable flagship, but minor drawbacks prevent it from achieving greatness.",
+      "rating": 3
+    },
+    {
+      "userId": 2,
+      "title": "Flagship Excellence",
+      "text": "The Samsung Galaxy S21 is a triumph of innovation. Its camera system astounds with sharpness and versatility. The sleek design and vibrant AMOLED display redefine elegance. Powerful performance, 5G connectivity, and enduring battery life make it a true flagship. A premium device that exceeds expectations in every aspect.",
+      "rating": 5
+    },
+    {
+      "userId": 3,
+      "title": "Disastrous Flagship",
+      "text": "The Samsung Galaxy S21 is a colossal disappointment. Its camera consistently disappoints with blurry shots and unreliable autofocus. The plastic back feels cheap, denting the premium allure. Battery life is abysmal, struggling to last through moderate use. A regrettable investment that fails to live up to flagship expectations.",
+      "rating": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d18f84908b3733e14acdf"
+  },
+  "productId": "7",
+  "productType": "Watch",
+  "brand": "Apple",
+  "title": "Watch Series 9",
+  "price": 449.99,
+  "text": "Apple Watch Series 9 (GPS) 41mm Starlight Aluminum Case with Starlight Sport Band - S/M - Starlight",
+  "image": "http://127.0.0.1:8081/images/watchimages/smartwatch3.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Underwhelming Iteration",
+      "text": "The Apple Watch Series 9 falls short of expectations. While its sleek design remains appealing, incremental updates do little to justify the upgrade. Connectivity issues and occasional software glitches hinder the experience. The absence of standout features leaves it trailing behind competitors. A lackluster addition to the Apple Watch lineup.",
+      "rating": 2
+    },
+    {
+      "userId": 2,
+      "title": "Stylish Evolution",
+      "text": "The Apple Watch Series 9 enhances the iconic design with subtle yet effective improvements. Its speed and responsiveness are commendable, offering a smoother user experience. Fitness and health features are top-notch, although some may find the updates incremental. A solid upgrade that maintains the Apple Watch's reputation for excellence.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Elevating Excellence",
+      "text": "The Apple Watch Series 9 is a masterpiece of innovation and refinement. Its sleek design combines seamlessly with powerful performance. The enhanced health and fitness features, along with the vibrant display, make it a standout. This iteration solidifies Apple's leadership in the smartwatch realm—an absolute joy to use.",
+      "rating": 5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d18f84908b3733e14acdd"
+  },
+  "productId": "5",
+  "productType": "Watch",
+  "brand": "Google",
+  "title": "Pixel Watch 2",
+  "price": 249.99,
+  "text": "Pixel Watch 2 Matte Black Smartwatch with Obsidian Active Band LTE - Matte Black",
+  "image": "http://127.0.0.1:8081/images/watchimages/smartwatch1.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Pixel Perfection Improved",
+      "text": "The Google Pixel Watch 2 elevates the smartwatch experience. Its refined design is both stylish and comfortable. Enhanced connectivity ensures smoother performance, and new features add value. Fitness tracking is accurate, and the expanded app ecosystem enriches user engagement. A commendable upgrade, striking a balance between style and functionality.",
+      "rating": 4
+    },
+    {
+      "userId": 2,
+      "title": "Evolution with Hiccups",
+      "text": "The Google Pixel Watch 2 refines its predecessor but encounters setbacks. Improved design and features enhance its appeal, yet connectivity issues persist. Fitness tracking remains reliable, but occasional glitches dampen the experience. While a step forward, it falls short of seamless excellence. A decent upgrade with room for improvement.",
+      "rating": 3
+    },
+    {
+      "userId": 3,
+      "title": "Pixel Watch 2 Frustration",
+      "text": "The Google Pixel Watch 2 disappoints with unresolved issues. Despite a stylish design upgrade, connectivity problems persist, affecting performance. Fitness tracking remains inconsistent, and promised features often fail to deliver. An aggravating experience that, unfortunately, fails to meet expectations. A miss for Google in the smartwatch arena.",
+      "rating": 2
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d18f84908b3733e14ace0"
+  },
+  "productId": "8",
+  "productType": "Watch",
+  "brand": "Apple",
+  "title": "Watch SE",
+  "price": 599.99,
+  "text": "Apple Watch SE 2nd Generation (GPS) 40mm Starlight Aluminum Case with Starlight Sport Band - S/M - Starlight",
+  "image": "http://127.0.0.1:8081/images/watchimages/smartwatch4.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Compact Competence",
+      "text": "The small Apple Watch SE (2nd Gen, GPS) strikes a balance between size and capability. While the design remains sleek, the lack of advanced features may disappoint some users. Reliable performance, fitness tracking, and the budget-friendly aspect make it a reasonable choice, albeit without the bells and whistles.",
+      "rating": 3
+    },
+    {
+      "userId": 2,
+      "title": "Mighty Mini Marvel",
+      "text": "The small Apple Watch SE (2nd Gen, GPS) impresses with its compact brilliance. Despite lacking advanced features, its reliable performance and essential fitness tracking deliver a satisfying experience. The budget-friendly price point makes it a compelling choice for those seeking Apple's renowned quality without breaking the bank.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Small Disappointment",
+      "text": "The small Apple Watch SE (2nd Gen, GPS) falls short of expectations. While the compact design is appealing, the absence of key features and limited performance disappoint. The budget-friendly aspect comes at the cost of functionality, making it a regrettable choice for those seeking a more comprehensive smartwatch experience.",
+      "rating": 2
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d18f84908b3733e14acde"
+  },
+  "productId": "6",
+  "productType": "Watch",
+  "brand": "Google",
+  "title": "Pixel Watch",
+  "price": 299.99,
+  "text": "Pixel Watch Smartwatch 41mm with Obsidian Active Band Wifi/BT - Black Stainless Steel",
+  "image": "http://127.0.0.1:8081/images/watchimages/smartwatch2.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Pixelated Disappointment",
+      "text": "The Google Pixel Watch is a regrettable purchase. Its promises of seamless integration and innovative features fall flat. Connectivity issues plague its performance, and the design lacks the finesse expected from a premium smartwatch. A frustrating experience that fails to compete with rival brands. Save your money and look elsewhere.",
+      "rating": 1
+    },
+    {
+      "userId": 2,
+      "title": "Underwhelming Timepiece",
+      "text": "The Google Pixel Watch falls short of expectations. While the design is sleek, its functionality disappoints. Connectivity problems hinder the overall experience, and the promised features often underperform. Limited app ecosystem and sluggish performance make it a lackluster choice. A missed opportunity for Google in the competitive smartwatch market.",
+      "rating": 2
+    },
+    {
+      "userId": 3,
+      "title": "Mediocre Wrist Companion",
+      "text": "The Google Pixel Watch offers a middle-of-the-road smartwatch experience. Its design is appealing, and basic fitness tracking functions well. However, it lacks standout features, and connectivity can be inconsistent. The battery life is satisfactory, but the overall performance falls short of the competition. A decent choice, but not groundbreaking.",
+      "rating": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a369f924596321c730ff4"
+  },
+  "productId": "9",
+  "productType": "Laptop",
+  "brand": "Dell",
+  "title": "XPS 13",
+  "price": 1499.99,
+  "text": "Dell XPS 13 Rose Gold Ultrabook with InfinityEdge Display - 13.4-inch 4K UHD Touchscreen",
+  "image": "http://127.0.0.1:8081/images/laptopimages/xps13.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Sleek and Powerful",
+      "text": "The Dell XPS 13 is a masterpiece, combining a sleek design with powerful performance. The InfinityEdge display is stunning, and the 4K UHD touchscreen adds a new dimension to user interaction. Whether for work or entertainment, this laptop delivers an exceptional experience.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Premium Quality",
+      "text": "Dell's XPS 13 is a symbol of premium quality. The rose gold finish is elegant, and the InfinityEdge display provides an immersive viewing experience. The laptop's performance is top-notch, making it a reliable companion for professionals and enthusiasts alike.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Stunning Display, but Pricey",
+      "text": "The XPS 13 boasts a stunning display with the InfinityEdge technology, but the premium quality comes at a price. The laptop delivers excellent performance, but its higher cost might be a consideration. Overall, a top-tier choice for those willing to invest in quality.",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a36c3924596321c730ff6"
+  },
+  "productId": "10",
+  "productType": "Laptop",
+  "brand": "HP",
+  "title": "Spectre x360",
+  "price": 1299.99,
+  "text": "HP Spectre x360 Dark Ash Silver Convertible Laptop with 360° Hinge - 15.6-inch 4K OLED Touchscreen",
+  "image": "http://127.0.0.1:8081/images/laptopimages/spectrex360.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Versatile and Stunning",
+      "text": "The HP Spectre x360 is a versatile and stunning convertible laptop. The Dark Ash Silver finish is eye-catching, and the 360° hinge adds versatility. The 4K OLED touchscreen delivers vibrant visuals, making it an ideal choice for creative professionals and multitaskers.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Impressive Convertible Design",
+      "text": "HP's Spectre x360 impresses with its convertible design and powerful performance. The Dark Ash Silver color adds a touch of sophistication, and the 4K OLED touchscreen provides an immersive experience. A highly recommended choice for those seeking versatility in a laptop.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Great Features, but Battery Life Concerns",
+      "text": "The Spectre x360 offers great features with its convertible design and vibrant display. However, some users may have concerns about the battery life, especially when using resource-intensive applications. Overall, a solid choice with a few considerations.",
+      "rating": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a36e5924596321c730ff8"
+  },
+  "productId": "11",
+  "productType": "Laptop",
+  "brand": "Apple",
+  "title": "MacBook Air",
+  "price": 999.99,
+  "text": "Apple MacBook Air Space Gray Laptop with M1 Chip - 13.3-inch Retina Display",
+  "image": "http://127.0.0.1:8081/images/laptopimages/macbookair.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Revolutionary Performance",
+      "text": "The MacBook Air with M1 Chip offers revolutionary performance in a sleek design. The Space Gray finish is timeless, and the 13.3-inch Retina Display delivers crystal-clear visuals. Apple's M1 chip elevates the laptop to new heights, making it a must-have for Apple enthusiasts.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Efficient and Stylish",
+      "text": "Apple's MacBook Air combines efficiency with style. The M1 chip ensures smooth performance, and the Space Gray finish adds a touch of elegance. The 13.3-inch Retina Display is a delight for content consumption. A reliable choice for those in the Apple ecosystem.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Great Performance, Limited Ports",
+      "text": "The MacBook Air with M1 Chip delivers great performance, but some users may find the limited ports restrictive. The Space Gray design is sleek, and the Retina Display is impressive. A recommended choice for those who prioritize performance over extensive connectivity options.",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a3734924596321c730ffa"
+  },
+  "productId": "12",
+  "productType": "Laptop",
+  "brand": "Google",
+  "title": "Pixelbook Pro",
+  "price": 1299.99,
+  "text": "Pixelbook Pro Silver Ultrabook with Chrome OS - 13.3-inch QHD Display",
+  "image": "http://127.0.0.1:8081/images/laptopimages/pixelbookpro.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Pixel Perfection in Productivity",
+      "text": "The Google Pixelbook Pro takes the laptop experience to new heights. Its sleek design is both modern and practical. Enhanced performance ensures smooth multitasking, and the Chrome OS ecosystem adds value. The high-resolution display enriches content consumption, making it a commendable choice for productivity.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Evolution with Exceptional Features",
+      "text": "The Google Pixelbook Pro evolves the Chromebook line with exceptional features. The design is refined, and the performance is top-notch. Connectivity is reliable, and the Chrome OS app ecosystem provides a seamless user experience. While not without minor quirks, it sets a new standard for premium Chromebooks.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Pixelbook Pro Quirks",
+      "text": "The Google Pixelbook Pro, while impressive, has its quirks. The design is sleek, but occasional connectivity issues can be frustrating. The performance is generally solid, but there are minor glitches. Overall, a strong contender in the premium laptop market, but improvements could make it exceptional.",
+      "rating": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a37c2924596321c730ffc"
+  },
+  "productId": "13",
+  "productType": "Tablet",
+  "brand": "Apple",
+  "title": "iPad Pro",
+  "price": 799.99,
+  "text": "Apple iPad Pro Silver Tablet with M1 Chip - 11-inch Liquid Retina Display",
+  "image": "http://127.0.0.1:8081/images/tabletimages/ipadpro.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Powerful and Versatile",
+      "text": "The iPad Pro with M1 Chip is a powerful and versatile tablet. The Silver finish exudes elegance, and the 11-inch Liquid Retina Display provides stunning visuals. Whether for work or creative pursuits, the iPad Pro delivers an exceptional experience.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Revolutionary Performance",
+      "text": "Apple's iPad Pro sets a new standard with its revolutionary M1 Chip. The tablet combines sleek design with unparalleled performance. The Liquid Retina Display enhances content consumption, making it a top choice for users seeking a premium tablet.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Ideal for Creativity",
+      "text": "The iPad Pro is ideal for creativity, thanks to its M1 Chip and high-quality display. The Silver tablet is a sleek companion for professionals and artists alike. The 11-inch Liquid Retina Display ensures a delightful viewing experience.",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a37d3924596321c730ffe"
+  },
+  "productId": "14",
+  "productType": "Tablet",
+  "brand": "Samsung",
+  "title": "Galaxy Tab S7",
+  "price": 649.99,
+  "text": "Samsung Galaxy Tab S7 Mystic Bronze Tablet with S Pen - 11-inch LTPS LCD Display",
+  "image": "http://127.0.0.1:8081/images/tabletimages/galaxytabs7.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Sleek Design, Impressive Features",
+      "text": "The Samsung Galaxy Tab S7 impresses with its sleek design and impressive features. The Mystic Bronze finish adds a touch of sophistication, and the 11-inch LTPS LCD Display provides vibrant visuals. The inclusion of the S Pen enhances productivity and creativity.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Great Multimedia Experience",
+      "text": "Samsung's Galaxy Tab S7 offers a great multimedia experience with its high-quality display. The Mystic Bronze tablet is not only stylish but also powerful. The S Pen adds a creative dimension, making it a versatile choice for users on the go.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Premium Tablet with S Pen",
+      "text": "The Galaxy Tab S7 is a premium tablet with the added advantage of the S Pen. The Mystic Bronze design is eye-catching, and the 11-inch LTPS LCD Display ensures a delightful viewing experience. A recommended choice for those seeking a feature-rich tablet.",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a37e3924596321c731000"
+  },
+  "productId": "15",
+  "productType": "Tablet",
+  "brand": "Amazon",
+  "title": "Fire HD 10",
+  "price": 149.99,
+  "text": "Amazon Fire HD 10 Black Tablet with Alexa - 10.1-inch Full HD Display",
+  "image": "http://127.0.0.1:8081/images/tabletimages/firehd10.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Affordable and Functional",
+      "text": "The Amazon Fire HD 10 is an affordable and functional tablet. The Black design is sleek, and the inclusion of Alexa adds convenience. The 10.1-inch Full HD Display provides a satisfying visual experience at a budget-friendly price.",
+      "rating": 4
+    },
+    {
+      "userId": 2,
+      "title": "Great Value for Money",
+      "text": "Amazon's Fire HD 10 offers great value for money with its affordable price and solid performance. The Black tablet is suitable for various tasks, and the inclusion of Alexa enhances user interaction. A recommended choice for budget-conscious users.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Functional and Portable",
+      "text": "The Fire HD 10 is a functional and portable tablet that meets the needs of everyday users. The Black design is simple yet stylish, and the 10.1-inch Full HD Display ensures clarity. A good choice for those seeking a reliable and budget-friendly tablet.",
+      "rating": 3
+    },
+    {
+      "userId": 4,
+      "title": "Mid",
+      "text": "I don't like tablets.",
+      "rating": 2
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a37f1924596321c731002"
+  },
+  "productId": "16",
+  "productType": "Tablet",
+  "brand": "Microsoft",
+  "title": "Surface Pro 7",
+  "price": 899.99,
+  "text": "Microsoft Surface Pro 7 Platinum Tablet with Type Cover - 12.3-inch PixelSense Display",
+  "image": "http://127.0.0.1:8081/images/tabletimages/surfacepro7.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Versatile and Productive",
+      "text": "The Microsoft Surface Pro 7 is a versatile and productive tablet. The Platinum finish is sleek, and the inclusion of the Type Cover enhances usability. The 12.3-inch PixelSense Display provides a clear and vibrant visual experience.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Premium Design and Performance",
+      "text": "Microsoft's Surface Pro 7 impresses with its premium design and performance. The Platinum tablet, coupled with the Type Cover, creates a laptop-like experience. The 12.3-inch PixelSense Display is perfect for work and entertainment.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Quality Build and Usability",
+      "text": "The Surface Pro 7 showcases a quality build and usability. The Platinum tablet with the Type Cover is a stylish and functional combination. The 12.3-inch PixelSense Display ensures a satisfying viewing experience for various tasks.",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a3960924596321c731004"
+  },
+  "productId": "17",
+  "productType": "VR",
+  "brand": "Oculus",
+  "title": "Quest 2",
+  "price": 299.99,
+  "text": "Oculus Quest 2 All-in-One VR Headset with Touch Controllers - 256GB",
+  "image": "http://127.0.0.1:8081/images/vrimages/quest2.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Immersive Experience",
+      "text": "The Oculus Quest 2 provides an immersive VR experience. The all-in-one headset, combined with the Touch Controllers, offers seamless interaction. With a spacious 256GB storage, it's a top choice for VR enthusiasts seeking a high-quality experience.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Affordable and Fun",
+      "text": "Oculus Quest 2 strikes a perfect balance between affordability and fun. The all-in-one VR headset delivers an enjoyable experience with the included Touch Controllers. The 256GB storage ensures there's plenty of space for diverse VR content.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Impressive VR, Some Limitations",
+      "text": "The Quest 2 offers an impressive VR experience, but there are some limitations. The all-in-one headset is convenient, and the Touch Controllers enhance immersion. However, users may encounter occasional glitches. Overall, a good choice with room for improvement.",
+      "rating": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a3971924596321c731006"
+  },
+  "productId": "18",
+  "productType": "VR",
+  "brand": "HTC",
+  "title": "Vive Pro",
+  "price": 799.99,
+  "text": "HTC Vive Pro Virtual Reality Headset with SteamVR Tracking - High-Resolution Display",
+  "image": "http://127.0.0.1:8081/images/vrimages/vivepro.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Professional-Grade VR",
+      "text": "The HTC Vive Pro sets a standard for professional-grade VR. With SteamVR Tracking and a high-resolution display, it caters to enthusiasts and professionals alike. The immersive experience is complemented by precise tracking, making it a top-tier choice.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Exceptional Visuals, Premium Price",
+      "text": "HTC's Vive Pro offers exceptional visuals with its high-resolution display. The VR headset provides a premium experience with precise tracking. However, the higher price may be a consideration for budget-conscious users.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Solid Performance, Heavy on the Wallet",
+      "text": "The Vive Pro delivers solid performance, but the price tag is heavy on the wallet. The high-resolution display and SteamVR Tracking enhance the overall experience. A recommended choice for those willing to invest in top-notch VR technology.",
+      "rating": 4
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a3981924596321c731008"
+  },
+  "productId": "19",
+  "productType": "VR",
+  "brand": "Sony",
+  "title": "PlayStation VR",
+  "price": 299.99,
+  "text": "Sony PlayStation VR Bundle with VR Headset, Camera, and VR Worlds Game",
+  "image": "http://127.0.0.1:8081/images/vrimages/playstationvr.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Console Integration at its Best",
+      "text": "PlayStation VR offers console integration at its best. The bundle, including the VR headset, camera, and VR Worlds game, provides a complete and immersive experience. It's a must-have for PlayStation enthusiasts seeking VR adventures.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Accessible VR for Gamers",
+      "text": "Sony's PlayStation VR makes VR accessible for gamers. The bundle ensures users have everything they need for a great VR experience. While not as high-end as some standalone headsets, it's a fantastic entry point into virtual reality.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Good Value, Limited Game Selection",
+      "text": "PlayStation VR provides good value with the bundled items, but the game selection may be limited. The VR headset and camera deliver a solid experience, but users may want more variety in available VR titles.",
+      "rating": 3
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "657a3ab5924596321c73100a"
+  },
+  "productId": "20",
+  "productType": "VR",
+  "brand": "Valve",
+  "title": "Index",
+  "price": 999.99,
+  "text": "Valve Index VR Kit with Headset, Controllers, and Base Stations - High Fidelity VR",
+  "image": "http://127.0.0.1:8081/images/vrimages/valveindex.jpg",
+  "reviews": [
+    {
+      "userId": 1,
+      "title": "Top-of-the-Line VR Experience",
+      "text": "The Valve Index provides a top-of-the-line VR experience with its comprehensive kit. The high fidelity VR headset, controllers, and base stations deliver unparalleled immersion. It's a premium choice for those seeking the best in virtual reality.",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "title": "Precision and Fidelity",
+      "text": "Valve's Index stands out for its precision and fidelity in VR. The complete kit, including the headset, controllers, and base stations, offers a seamless and accurate experience. While the price is high, the quality justifies the investment.",
+      "rating": 4
+    },
+    {
+      "userId": 3,
+      "title": "Outstanding VR, Considerable Cost",
+      "text": "The Valve Index provides an outstanding VR experience, but the considerable cost may be a barrier for some users. The high-quality components ensure fidelity, making it a solid choice for enthusiasts willing to make the investment.",
+      "rating": 4
+    }
+  ]
+}]
