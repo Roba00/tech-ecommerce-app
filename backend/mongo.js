@@ -256,22 +256,6 @@ app.put("/updateAccount", async (req, res) => {
 
     console.log(req.body.email);
     delete req.body._id;
-    /*console.log(values);
-    const [id, name, password, location, image, wishlist, cart, recentlyPurchased, email, title, phone] = values;
-    console.log("Product to update:", id);
-    const replacement = {
-        "id": id,
-        "name": name,
-        "password": password,
-        "location": location,
-        "image": image,
-        "wishlist": wishlist,
-        "cart": cart,
-        "recentlyPurchased": recentlyPurchased,
-        "email": email,
-        "title": title,
-        "phone": phone,
-    };*/
     if (req.decodedToken.email === req.body.email) {
         /* Creating a results. */
         const query = { "email": req.decodedToken.email };
@@ -390,6 +374,3 @@ app.delete("/deleteReview/:productId/:userId/", async (req, res) => {
     res.status(200);
     res.send(results);
 });
-// db.products.update({$and: [{productId: "1"}, {reviews: {$elemMatch: {userId: 1}}}]}, { $push: { "reviews": { userId : 4, title: "Title", text:  "Text", "rating": 4 } } });
-// db.products.update({$and: [{productId: "1"}, {reviews: {$elemMatch: {userId: 1}}}]}, { $pull: { "reviews": { userId : 1 } } });
-// db.products.find({productId: "1"}, {reviews: {$elemMatch: {userId: 1}}})
