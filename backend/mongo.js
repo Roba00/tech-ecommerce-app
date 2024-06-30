@@ -17,7 +17,8 @@ app.use(express.static("public"));
 app.use("/images", express.static("images"));
 
 // Mongo
-const url = "mongodb+srv://adminuser:11zofQTYB2kx8XXr@phase2-data.deeexoe.mongodb.net/";
+const mongoPass = encodeURIComponent(process.env.MONGO_PASSWORD.trim());
+const url = `mongodb+srv://adminuser:${password}@phase2-data.deeexoe.mongodb.net/`;
 const dbName = "react-app";
 const client = new MongoClient(url);
 const db = client.db(dbName);
