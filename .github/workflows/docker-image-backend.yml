@@ -12,12 +12,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Login Dockerhub
-      env:
-        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-    - name: Build the Docker image
-      run: docker build ./backend --file Dockerfile --tag my-image-name:$(date +%s)
-    - name: Push to Dockerhub
-      run: docker push roba00/tech-ecommerce-app-backend:latest
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          tags: roba00/tech-ecommerce-app-backend:latest
+          context: ./backend
