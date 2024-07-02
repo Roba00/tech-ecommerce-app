@@ -1,4 +1,4 @@
-FROM node:alpine.18 as build
+FROM node:lts-alpine as build
 
 # Declare build time environmental variables
 ARG REACT_APP_NODE_ENV
