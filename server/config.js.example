@@ -1,0 +1,6 @@
+module.exports = {
+    'PORT': '0000',
+    'MONGO_USERNAME': 'user',
+    'MONGO_PASSWORD': '1234',
+    'JSON_WEB_TOKEN_KEY': '0123456789'
+}
