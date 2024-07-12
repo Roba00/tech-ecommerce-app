@@ -37,12 +37,14 @@
   <h3 align="center">Cherry</h3>
 
   <p align="center">
-    A tech e-commerce app
+    A tech e-commerce web app
     <br />
-    <a href=""><strong>Explore the docs »</strong></a>
+    <a><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://tech-ecommerce-t36oicb76-roba-abbajabals-projects.vercel.app/">View Web App</a>
+    .
+    <a>View Demo</a>
     ·
     <a href="https://github.com/Roba00/tech-ecommerce-app/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -92,7 +94,6 @@ This project utilizes the MERN stack. The major frameworks/libraries used to boo
 * [![React][React.js]][React-url]
 * [![Node][Node.js]][Node-url]
 * [![MongoDB][MongoDB]][MongoDB-url]
-* [![AWS][AWS]][AWS-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,12 +144,16 @@ WIP.
 <!-- ROADMAP -->
 ## Roadmap
 
+- [X] Create Mongo database
+- [X] Create Express/Node backend server
 - [x] Create React frontend
-- [X] Create Mongo backend
-- [ ] Setup GitHub Actions CI/CD
-- [ ] Setup Docker imaging
-- [ ] Host and deploy project backend  (AWS EC2, Vercel, etc.)
-- [ ] Multi-device support
+- [X] Setup GitHub Actions to deploy Docker image for backend server
+    - Deployed using [Render](https://render.com/)
+- [X] Deploy React app statically
+    - Deployed using [Vercel](https://vercel.com/)
+- [ ] Transition React App to Express
+- [ ] Beautify React App Pages
+- [ ] Add Multi-device support
     - [X] Desktop
     - [ ] Mobile
 
