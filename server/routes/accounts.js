@@ -7,6 +7,10 @@ var { client, db } = require('../db')
 const jwt = require("jsonwebtoken");
 const TOKEN_KEY = process.env.JSON_WEB_TOKEN_KEY || '0123456789';
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 router.get("/getUserById/:id", async (req, res) => {
   const id = Number(req.params.id);
   console.log("User to find:", id);
