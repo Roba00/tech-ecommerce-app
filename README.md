@@ -120,7 +120,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 2. Install NPM packages
    ```sh
-   cd ./backend
+   cd ./server
    npm install
    cd ./frontend
    npm install
@@ -146,9 +146,9 @@ WIP.
 - [x] Create React frontend
 - [X] Create Mongo backend
 - [ ] Setup GitHub Actions CI/CD
-- [ ] Setup Docker
-- [ ] Deploy project on AWS EC2
-- [-] Multi-device support
+- [ ] Setup Docker imaging
+- [ ] Host and deploy project backend  (AWS EC2, Vercel, etc.)
+- [ ] Multi-device support
     - [X] Desktop
     - [ ] Mobile
 

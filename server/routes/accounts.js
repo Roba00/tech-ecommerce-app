@@ -2,11 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 var { client, db } = require('../db')
-var config = require("../config")
 
 // Authentication
 const jwt = require("jsonwebtoken");
-const TOKEN_KEY = process.env.JSON_WEB_TOKEN_KEY || config.JSON_WEB_TOKEN_KEY;
+const TOKEN_KEY = process.env.JSON_WEB_TOKEN_KEY || '0123456789';
 
 router.get("/getUserById/:id", async (req, res) => {
   const id = Number(req.params.id);

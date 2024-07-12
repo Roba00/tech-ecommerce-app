@@ -1,10 +1,8 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
-var config = require("./config")
-
 // Mongo
-const mongoUser = encodeURIComponent(process.env.MONGO_USERNAME || config.MONGO_USERNAME);
-const mongoPass = encodeURIComponent(process.env.MONGO_PASSWORD || config.MONGO_PASSWORD);
+const mongoUser = encodeURIComponent(process.env.MONGO_USERNAME || 'user');
+const mongoPass = encodeURIComponent(process.env.MONGO_PASSWORD || '1234');
 const uri = `mongodb+srv://${mongoUser}:${mongoPass}@phase2-data.deeexoe.mongodb.net/?retryWrites=true&w=majority`;
 const dbName = "react-app";
 const client = new MongoClient(uri, {
