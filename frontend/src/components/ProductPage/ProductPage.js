@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-const GET_ACCOUNT_QUERY = "http://localhost:8081/getAccount";
-const ADD_REVIEW_QUERY = "http://localhost:8081/addReview";
-const DELETE_REVIEW_QUERY = "http://localhost:8081/deleteReview"
+const GET_ACCOUNT_QUERY = `${process.env.REACT_APP_SERVER_URL}/accounts/getAccount`;
+const ADD_REVIEW_QUERY = `${process.env.REACT_APP_SERVER_URL}/reviews/addReview`;
+const DELETE_REVIEW_QUERY = `${process.env.REACT_APP_SERVER_URL}/reviews/deleteReview`;
 
 const getUserInformation = async (userToken, setAccountInfo) => {
   console.log("User:", userToken);
@@ -76,7 +76,7 @@ const ProductPage = ({ product, userToken }) => {
 
   async function getUser(user_id) {
     console.log("Called getUser: " + user_id);
-    const response = await fetch(`http://localhost:8081/getUserById/${user_id}`);
+    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/accounts/getUserById/${user_id}`);
     const data = await response.json();
     // console.log("Fetched user:", data.name);
     console.log("Fetched user:", data)

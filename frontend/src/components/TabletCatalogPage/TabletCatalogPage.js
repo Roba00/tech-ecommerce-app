@@ -10,7 +10,7 @@ const TabletCatalogPage = ({setView, setProduct, setCart}) => {
   }, []);
 
   function getTabletData() {
-    fetch('http://localhost:8081/listTablets')
+    fetch(`${process.env.REACT_APP_SERVER_URL}/products/listTablets`)
       .then(response => response.json())
       .then(data => {
         console.log("Fetched tablet catalog:", data);

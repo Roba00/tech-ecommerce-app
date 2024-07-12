@@ -10,7 +10,7 @@ const VrCatalogPage = ({setView, setProduct, setCart}) => {
   }, []);
 
   function getVrData() {
-    fetch('http://localhost:8081/listVrs')
+    fetch(`${process.env.REACT_APP_SERVER_URL}/products/listVrs`)
       .then(response => response.json())
       .then(data => {
         console.log("Fetched vr catalog:", data);

@@ -2,9 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const GET_ACCOUNT_QUERY = "http://localhost:8081/getAccount";
-const PRODUCT_ID_QUERY = "http://localhost:8081/getProductById/";
-const UPDATE_ACCOUNT_QUERY = "http://localhost:8081/updateAccount/";
+const GET_ACCOUNT_QUERY = `${process.env.REACT_APP_SERVER_URL}/accounts/getAccount`;
+const PRODUCT_ID_QUERY = `${process.env.REACT_APP_SERVER_URL}/products/getProductById/`;
+const UPDATE_ACCOUNT_QUERY = `${process.env.REACT_APP_SERVER_URL}/accounts/updateAccount/`;
 
 const getUserInformation = async (userToken, setAccountInfo, wishlist, setWishlist, recentlyPurchased, setRecentlyPurchased) => {
   console.log("User:", userToken);

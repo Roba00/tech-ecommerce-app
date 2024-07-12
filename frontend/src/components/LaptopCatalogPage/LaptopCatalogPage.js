@@ -10,7 +10,7 @@ const LaptopCatalogPage = ({setView, setProduct, setCart}) => {
   }, []);
 
   function getLaptopData() {
-    fetch('http://localhost:8081/listLaptops')
+    fetch(`${process.env.REACT_APP_SERVER_URL}/products/listLaptops`)
       .then(response => response.json())
       .then(data => {
         console.log("Fetched laptop catalog:", data);

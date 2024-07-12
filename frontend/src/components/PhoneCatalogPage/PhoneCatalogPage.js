@@ -11,7 +11,7 @@ const PhoneCatalogPage = ({setView, setProduct, setCart}) => {
   }, []);
 
   function getPhoneData() {
-    fetch('http://localhost:8081/listPhones')
+    fetch(`${process.env.REACT_APP_SERVER_URL}/products/listPhones`)
       .then(response => response.json())
       .then(data => {
         console.log("Fetched phone catalog:", data);

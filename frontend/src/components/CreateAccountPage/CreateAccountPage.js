@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
-const CREATE_ACCOUNT_QUERY = "http://localhost:8081/createAccount";
+const CREATE_ACCOUNT_QUERY = `${process.env.REACT_APP_SERVER_URL}/accounts/createAccount`;
 
 const createAccountRequest = async (userCredentials) => {
   const response = await fetch(CREATE_ACCOUNT_QUERY, {

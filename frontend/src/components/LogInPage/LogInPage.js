@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
-const LOGIN_QUERY = "http://localhost:8081/login";
+const LOGIN_QUERY = `${process.env.REACT_APP_SERVER_URL}/accounts/login`;
 
 const sendLoginRequest = async (userCredentials) => {
   const response = await fetch(LOGIN_QUERY, {

@@ -10,7 +10,7 @@ const WatchCatalogPage = ({setView, setProduct, setCart}) => {
   }, []);
 
   function getWatchData() {
-    fetch('http://localhost:8081/listWatches')
+    fetch(`${process.env.REACT_APP_SERVER_URL}/products/listWatches`)
       .then(response => response.json())
       .then(data => {
         console.log("Fetched watch catalog:", data);
